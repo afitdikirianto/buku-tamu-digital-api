@@ -18,3 +18,5 @@ Route::put('/guest/{id}/approve',
 [GuestController::class,'approve']);
 Route::get('/dashboard',
 [GuestController::class,'dashboard']);
+Route::middleware('auth:sanctum')->post('/logout',
+    [AuthController::class,'logout']);
